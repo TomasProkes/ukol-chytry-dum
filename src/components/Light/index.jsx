@@ -1,21 +1,12 @@
 import React, { useState } from "react";
-
 import './style.css';
-
 import lightOn from './light-on.svg';
 import lightOff from './light-off.svg';
 
 const Light = ({name, state}) => {
 
     const [lightState, setLightState] = useState(state);
-
-    const switchLight = () => {
-        if (lightState === 'on') {
-            setLightState('off');
-        } else {
-            setLightState('on');
-        }
-    }
+    const switchLight = () => setLightState(lightState => (lightState === 'on' ? 'off' : 'on'));
 
     return (
         <div onClick={switchLight} className="light">
