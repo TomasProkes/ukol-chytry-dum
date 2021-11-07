@@ -4,7 +4,7 @@ import Lights from "../Lights";
 import './style.css';
 
 const Dashboard = ({data}) => (
-    <main class="dashboard">
+    <main className="dashboard">
         <Lights lights={data.lights} />
 
 	</main>

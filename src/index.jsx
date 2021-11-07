@@ -8,7 +8,7 @@ import smartHomeData from './smartHomeData';
 
 const App = () => (
   <>
-    <div class="container">
+    <div className="container">
       <Header title='Chytrý dům' />
       <Dashboard data={smartHomeData} />
 	  </div>

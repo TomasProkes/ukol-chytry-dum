@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 import './style.css';
 
+import lightOn from './light-on.svg';
+import lightOff from './light-off.svg';
+
 const Light = ({name, state}) => {
 
     const [lightState, setLightState] = useState(state);
@@ -15,12 +18,12 @@ const Light = ({name, state}) => {
     }
 
     return (
-        <div onClick="switchLight" class="light">
-            <div class="light__icon">
-                <img src={`./images/light-${lightState}.svg`} />
+        <div onClick={switchLight} className="light">
+            <div className="light__icon">
+                <img src={(lightState === 'on' ? lightOn : lightOff)} />
             </div>
-            <div class="light__name">
-                Obývací pokoj
+            <div className="light__name">
+                {name}
             </div>
         </div>
     );
